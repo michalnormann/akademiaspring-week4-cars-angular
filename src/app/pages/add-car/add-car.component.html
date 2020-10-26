@@ -1,0 +1,18 @@
+<h1>x</h1>
+<div>
+  <form class="container" #carForm="ngForm" (ngSubmit)="add(carForm.value)">
+    <div class="md-form">
+      <input mdbInput type="text" id="mark" class="form-control" name="mark" ngModel>
+      <label for="mark" class="">Mark</label>
+    </div>
+    <div class="md-form">
+      <input mdbInput type="text" id="model" class="form-control" name="model" ngModel>
+      <label for="model" class="">Model</label>
+    </div>
+    <div class="md-form">
+      <input mdbInput type="text" id="color" class="form-control" name="color" ngModel>
+      <label for="color" class="">Color</label>
+    </div>
+    <button type="submit" mdbBtn color="success" mdbWavesEffect>Add new car</button>
+  </form>
+</div>

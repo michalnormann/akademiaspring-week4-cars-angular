@@ -1,0 +1,24 @@
+<h1>x</h1>
+<table mdbTable>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Mark</th>
+      <th>Model</th>
+      <th>Color</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let car of cars | async" scope="col">
+    <tr mdbTableCol>
+      <td scope="row">{{car.id}}</td>
+      <td>{{car.mark}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.color}}</td>
+      <td>
+        <button type="submit" mdbBtn color="info" mdbWavesEffect [routerLink]="['/car', car.id]">Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
